@@ -11,6 +11,38 @@
   - Achieved <60s detection and <9s processing time for security incidents
   - [GitHub Repo](https://github.com/ronanlucky/SOC-Automation-Lab) | [View Demo](https://github.com/ronanlucky/SOC-Automation-Lab#implementation-flow-event-journey)
 
+- <b>Agentic SOC Analyst (Microsoft Sentinel + Claude AI)</b>
+  - Built an agentic AI-powered SOC analyst integrating Microsoft Sentinel with Claude AI
+  - Automated KQL query generation, alert triage, and MITRE ATT&CK threat mapping
+  - Designed for real-world incident detection and AI-assisted response workflows
+  - [GitHub Repo](https://github.com/ronanlucky/agentic-soc-sentinel)
+
+- <b>Kali Linux SSH MCP Bridge</b>
+  - Built a Claude Desktop ↔ Kali Linux SSH bridge via Model Context Protocol (MCP)
+  - Enables AI-assisted penetration testing and security research directly from Claude Desktop
+  - Bridges natural language commands to live Kali Linux terminal execution
+  - [GitHub Repo](https://github.com/ronanlucky/kali-ssh-mcp)
+
+- <b>SOC 2 Type I Audit Simulation</b>
+  - Conducted a simulated SOC 2 Type I audit of a personal SOC automation lab
+  - Produced formal deliverables: risk assessment, control mapping, and findings report
+  - Demonstrated GRC skills including trust service criteria, evidence collection, and gap analysis
+  - [GitHub Repo](https://github.com/ronanlucky/SOC2-Audit-Lab)
+
+- <b>Fake Job Posting Detection (Machine Learning)</b>
+  - Detected fraudulent job listings using neural networks and Random Forest
+  - Achieved 98% accuracy in identifying scam postings
+  - Technologies: Python, TensorFlow, Scikit-learn, Pandas
+  - [GitHub Repo](https://github.com/ronanlucky/Fake-Job-Posting-Detection)
+
+- <b>Security Analysis & Hardening Projects</b>
+  - Network Security: Configured firewalls, VPNs, and IDS/IPS using Snort with Wireshark analysis
+  - Web Security: Built SQL injection detection system and analyzed database security vulnerabilities
+  - Linux Hardening: Automated security configurations implementing CIS benchmarks
+  - [Network Security Report](./Cybersecurity-incident-report-network-traffic-analysis.pdf) | [SQL Analysis](./Apply%20filters%20to%20SQL%20queries.pdf) | [Linux Guide](./Reference%20Guide%20Linux.pdf)
+
+<h2>📖 Coursework</h2>
+
 - <b>CS-5770: Software Vulnerabilities & Security</b>
   - Hands-on security challenges: network forensics, web exploitation, privilege escalation
   - Documented methodologies for packet analysis, SQL injection, command injection, Unix security
@@ -23,18 +55,6 @@
   - Built automated security scripts for system hardening and threat detection
   - Skills: Linux administration, Bash scripting, AES/RSA encryption, digital envelopes, log analysis
   - [GitHub Repo](https://github.com/ronanlucky/CY5001-Cybersecurity-Skills)
-
-- <b>Fake Job Posting Detection (Machine Learning)</b>  
-  - Detected fraudulent job listings using neural networks and Random Forest
-  - Achieved 98% accuracy in identifying scam postings
-  - Technologies: Python, TensorFlow, Scikit-learn, Pandas
-  - [GitHub Repo](https://github.com/ronanlucky/Fake-Job-Posting-Detection)
-
-- <b>Security Analysis & Hardening Projects</b>
-  - Network Security: Configured firewalls, VPNs, and IDS/IPS using Snort with Wireshark analysis
-  - Web Security: Built SQL injection detection system and analyzed database security vulnerabilities
-  - Linux Hardening: Automated security configurations implementing CIS benchmarks
-  - [Network Security Report](./Cybersecurity-incident-report-network-traffic-analysis.pdf) | [SQL Analysis](./Apply%20filters%20to%20SQL%20queries.pdf) | [Linux Guide](./Reference%20Guide%20Linux.pdf)
 
 <h2>🏆 Professional Experience</h2>
 
@@ -104,11 +124,12 @@
 
 <h2>💼 Technical Skills</h2>
 
-**Security Tools**: Splunk • Wireshark • Metasploit • Nmap • Burp Suite • Nessus  
+**Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus  
+**AI & Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP)  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
-**Programming**: Python • SQL • Bash • PowerShell • JavaScript  
+**Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
 **Platforms**: Linux • Windows Server • Docker • VMware • AWS  
-**Frameworks**: MITRE ATT&CK • NIST • CIS Controls • OWASP Top 10  
+**Frameworks**: MITRE ATT&CK • NIST • CIS Controls • OWASP Top 10 • SOC 2  
 
 <h2>📫 Connect With Me</h2>
 <p>
@@ -124,4 +145,4 @@
 </p>
 
 ---
-*Currently seeking Summer 2026 cybersecurity internship opportunities in Security Operations, Incident Response, or Security Engineering*
+*Currently seeking Fall 2026 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, or Security Engineering*
