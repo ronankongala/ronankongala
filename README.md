@@ -1,9 +1,17 @@
 <h1>Hi, I'm Ronan! <br/>
   <a href="https://github.com/ronankongala">Cybersecurity Professional</a>, 
-  <a href="https://www.linkedin.com/in/ronan-kongala-99068a240/">MS Student @ Northeastern</a>
+  <a href="https://www.linkedin.com/in/ronan-kongala">MS Student @ Northeastern</a>
 </h1>
 
 <h2>🚀 Featured Projects</h2>
+
+- <b>NIST 800-171 / CMMC Compliance Baseline Lab</b>
+  - Built a hands-on compliance environment simulating a small defense contractor onboarding to CMMC Level 2
+  - Configured Active Directory Domain Services, Group Policy password/lockout enforcement, Microsoft Intune device compliance, and Entra ID Conditional Access requiring device compliance for cloud app access
+  - Hardened Windows Defender Firewall rules restricting SMB to internal subnet and blocking outbound Telnet
+  - Authored a full System Security Plan and CMMC Level 2 self-assessment scorecard mapping every control to its NIST 800-171 requirement, scoring 12 of 15 practices met
+  - Modeled the client-facing side in HubSpot: customer onboarding pipeline and support ticket workflow
+  - [GitHub Repo](https://github.com/ronankongala/nist-cmmc-compliance-lab)
 
 - <b>Agentic SOC Analyst (Microsoft Sentinel + Claude AI)</b>
   - Built an agentic AI-powered SOC analyst integrating Microsoft Sentinel with Claude AI
@@ -143,16 +151,17 @@
 <h2>💼 Technical Skills</h2>
 
 **Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
+**Identity & Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure  
 **AI & Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP)  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
 **Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
-**Platforms**: Linux • Windows Server • Docker • VMware • AWS  
-**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • CIS Controls • OWASP Top 10 • SOC 2  
+**Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure  
+**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-171 • CMMC • CIS Controls • OWASP Top 10 • SOC 2  
 
 <h2>📫 Connect With Me</h2>
 <p>
-  <a href="https://www.linkedin.com/in/ronan-kongala-99068a240/">
+  <a href="https://www.linkedin.com/in/ronan-kongala">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:kongalaronan@gmail.com">
