@@ -6,11 +6,9 @@
 <h2>🚀 Featured Projects</h2>
 
 - <b>NIST 800-171 / CMMC Compliance Baseline Lab</b>
-  - Built a hands-on compliance environment simulating a small defense contractor onboarding to CMMC Level 2
-  - Configured Active Directory Domain Services, Group Policy password/lockout enforcement, Microsoft Intune device compliance, and Entra ID Conditional Access requiring device compliance for cloud app access
-  - Hardened Windows Defender Firewall rules restricting SMB to internal subnet and blocking outbound Telnet
-  - Authored a full System Security Plan and CMMC Level 2 self-assessment scorecard mapping every control to its NIST 800-171 requirement, scoring 12 of 15 practices met
-  - Modeled the client-facing side in HubSpot: customer onboarding pipeline and support ticket workflow
+  - Configured Active Directory, Group Policy, Microsoft Intune device compliance, and Entra ID Conditional Access requiring device compliance for cloud app access
+  - Hardened Windows Defender Firewall rules and authored a System Security Plan mapping every control to its NIST 800-171 requirement
+  - Built a CMMC Level 2 self-assessment scorecard scoring 12 of 15 practices met, with remaining gaps documented as next steps
   - [GitHub Repo](https://github.com/ronankongala/nist-cmmc-compliance-lab)
 
 - <b>Agentic SOC Analyst (Microsoft Sentinel + Claude AI)</b>
