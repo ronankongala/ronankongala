@@ -5,6 +5,12 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>Access-Governed RAG Console (LLM Access Control + Entra ID SSO)</b>
+  - Built a RAG assistant that enforces role-based access control at the retrieval layer, so restricted documents are excluded from a non-authorized user's candidate set before the model ever sees them
+  - Integrated real Microsoft Entra ID (OAuth2) sign-in with app-role claims mapped to backend RBAC, plus a demo-login fallback so the repo runs with zero external setup
+  - Added a prompt-injection scanner (validated by a 10-case attack battery, 10/10 resisted) and full audit logging of every access decision; deployed to Azure App Service
+  - [GitHub Repo](https://github.com/ronankongala/Access-governed-rag-console)
+
 - <b>NIST 800-171 / CMMC Compliance Baseline Lab</b>
   - Configured Active Directory, Group Policy, Microsoft Intune device compliance, and Entra ID Conditional Access requiring device compliance for cloud app access
   - Hardened Windows Defender Firewall rules and authored a System Security Plan mapping every control to its NIST 800-171 requirement
@@ -150,8 +156,8 @@
 
 **Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
 **Identity & Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
-**Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure  
-**AI & Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP)  
+**Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
+**AI & Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
 **Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
 **Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure  
@@ -171,4 +177,4 @@
 </p>
 
 ---
-*Currently seeking Spring 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Cloud Security, or Detection Engineering*
+*Currently seeking Summer/Fall 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Cloud Security, Detection Engineering, or AI/LLM Security*
