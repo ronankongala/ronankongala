@@ -5,6 +5,13 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>Malware Analysis Lab — AgentTesla Static, Dynamic + Memory Forensics</b>
+  - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2 — identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
+  - Wrote 3 custom YARA rules from extracted indicators (imphash, MurmurHash seed bytes, structural heuristics) validated with YARA 4.5.5 — zero false positives across System32
+  - Detonated the sample in Any.run sandbox: confirmed Stealc/Vidar stealer behavior, 32 dropped files targeting Chrome/Edge credential stores, 87 IOCs, 11 MITRE ATT&CK techniques mapped
+  - Acquired live memory from FlareVM with winpmem v4.0-rc1 (7GB dump), analyzed with Volatility 3 — detected PAGE_EXECUTE_READWRITE code injection in SearchApp.exe and powershell.exe
+  - [GitHub Repo](https://github.com/ronankongala/malware-analysis-lab)
+
 - <b>Access-Governed RAG Console (LLM Access Control + Entra ID SSO)</b>
   - Built a RAG assistant that enforces role-based access control at the retrieval layer, so restricted documents are excluded from a non-authorized user's candidate set before the model ever sees them
   - Integrated real Microsoft Entra ID (OAuth2) sign-in with app-role claims mapped to backend RBAC, plus a demo-login fallback so the repo runs with zero external setup
@@ -154,6 +161,7 @@
 
 <h2>💼 Technical Skills</h2>
 
+**Malware Analysis**: PEStudio • CAPA • Ghidra • YARA • CAPE Sandbox • Any.run • winpmem • Volatility 3  
 **Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
 **Identity & Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
@@ -177,4 +185,4 @@
 </p>
 
 ---
-*Currently seeking Summer/Fall 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Cloud Security, Detection Engineering, or AI/LLM Security*
+*Currently seeking Summer/Fall 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Malware Analysis, Detection Engineering, or AI/LLM Security*
