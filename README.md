@@ -5,11 +5,11 @@
 
 <h2>🚀 Featured Projects</h2>
 
-- <b>Malware Analysis Lab — AgentTesla Static, Dynamic + Memory Forensics</b>
-  - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2 — identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
-  - Wrote 3 custom YARA rules from extracted indicators (imphash, MurmurHash seed bytes, structural heuristics) validated with YARA 4.5.5 — zero false positives across System32
-  - Detonated the sample in Any.run sandbox: confirmed Stealc/Vidar stealer behavior, 32 dropped files targeting Chrome/Edge credential stores, 87 IOCs, 11 MITRE ATT&CK techniques mapped
-  - Acquired live memory from FlareVM with winpmem v4.0-rc1 (7GB dump), analyzed with Volatility 3 — detected PAGE_EXECUTE_READWRITE code injection in SearchApp.exe and powershell.exe
+- <b>Malware Analysis Lab: AgentTesla Static, Dynamic + Memory Forensics</b>
+  - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2; identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
+  - Wrote 3 custom YARA rules from extracted indicators (imphash, MurmurHash seed bytes, structural heuristics) validated with YARA 4.5.5; zero false positives across System32
+  - Detonated the sample in Any.run sandbox; confirmed Stealc/Vidar stealer behavior, 32 dropped files targeting Chrome/Edge credential stores, 87 IOCs, 11 MITRE ATT&CK techniques mapped
+  - Acquired live memory from FlareVM with winpmem v4.0-rc1 (7GB dump), analyzed with Volatility 3; detected PAGE_EXECUTE_READWRITE code injection in SearchApp.exe and powershell.exe
   - [GitHub Repo](https://github.com/ronankongala/malware-analysis-lab)
 
 - <b>Access-Governed RAG Console (LLM Access Control + Entra ID SSO)</b>
@@ -38,7 +38,7 @@
 
 - <b>Suricata IDS + ELK Stack on AWS EC2</b>
   - Deployed Suricata 7.0.3 IDS on AWS EC2 with custom detection rules monitoring live network traffic
-  - Built a log ingestion pipeline (Suricata → Filebeat → Elasticsearch) indexing 110+ security events
+  - Built a log ingestion pipeline (Suricata to Filebeat to Elasticsearch) indexing 110+ security events
   - Designed Kibana dashboards visualizing alert signatures and event type distribution
   - [GitHub Repo](https://github.com/ronankongala/suricata-ids-elk-lab)
 
@@ -49,9 +49,9 @@
   - [GitHub Repo](https://github.com/ronankongala/-s3-security-auditor)
 
 - <b>SOC Automation Lab with AI Threat Analysis</b>
-  - Built end-to-end security pipeline: Windows → Splunk → n8n → OpenAI → Slack
+  - Built end-to-end security pipeline: Windows to Splunk to n8n to OpenAI to Slack
   - Automated threat detection with MITRE ATT&CK mapping and AI-powered analysis
-  - Achieved <60s detection and <9s processing time for security incidents
+  - Achieved under 60s detection and under 9s processing time for security incidents
   - [GitHub Repo](https://github.com/ronankongala/SOC-Automation-Lab) | [View Demo](https://github.com/ronankongala/SOC-Automation-Lab#implementation-flow-event-journey)
 
 - <b>SOC 2 Type I Audit Simulation</b>
@@ -60,19 +60,19 @@
   - Demonstrated GRC skills including trust service criteria, evidence collection, and gap analysis
   - [GitHub Repo](https://github.com/ronankongala/SOC2-Audit-Lab)
 
-- <b>Fake Job Posting Detection (Published Research — IEEE ICAISS 2025)</b>
+- <b>Fake Job Posting Detection (Published Research: IEEE ICAISS 2025)</b>
   - Detected fraudulent job listings using ensemble ML (Random Forest, XGBoost, Gradient Boosting, AdaBoost)
   - Achieved 98% accuracy across 9,000+ records using SMOTE/ADASYN class balancing
   - Presented at the 3rd International Conference on Augmented Intelligence and Sustainable Systems (ICAISS 2025)
   - [Read the Paper](https://github.com/ronankongala/Fake-Job-Posting-Detection/blob/main/IEEE%20paper%20pdf.pdf) | [GitHub Repo](https://github.com/ronankongala/Fake-Job-Posting-Detection)
 
 - <b>Kali Linux SSH MCP Bridge</b>
-  - Built a Claude Desktop ↔ Kali Linux SSH bridge via Model Context Protocol (MCP)
+  - Built a Claude Desktop to Kali Linux SSH bridge via Model Context Protocol (MCP)
   - Enables AI-assisted penetration testing and security research directly from Claude Desktop
   - Bridges natural language commands to live Kali Linux terminal execution
   - [GitHub Repo](https://github.com/ronankongala/kali-ssh-mcp)
 
-- <b>Security Analysis & Hardening Projects</b>
+- <b>Security Analysis and Hardening Projects</b>
   - Network Security: Configured firewalls, VPNs, and IDS/IPS using Snort with Wireshark analysis
   - Web Security: Built SQL injection detection system and analyzed database security vulnerabilities
   - Linux Hardening: Automated security configurations implementing CIS benchmarks
@@ -80,13 +80,13 @@
 
 <h2>📖 Coursework</h2>
 
-- <b>CS-5770: Software Vulnerabilities & Security</b>
+- <b>CS-5770: Software Vulnerabilities and Security</b>
   - Hands-on security challenges: network forensics, web exploitation, privilege escalation
   - Documented methodologies for packet analysis, SQL injection, command injection, Unix security
   - Tools: Wireshark, Nmap, Burp Suite, SQL injection techniques, privilege escalation
   - [GitHub Repo](https://github.com/ronankongala/CS-5770-Software-Vulnerabilities-Security)
 
-- <b>CY5001: Cybersecurity Technologies, Threats & Defense</b>
+- <b>CY5001: Cybersecurity Technologies, Threats and Defense</b>
   - Comprehensive coursework in Linux security, cryptography, and network defense
   - Implemented GPG/PGP encryption, OpenSSL operations, digital signatures, and hybrid encryption
   - Built automated security scripts for system hardening and threat detection
@@ -95,7 +95,7 @@
 
 <h2>🏆 Professional Experience</h2>
 
-<h3>Industry Simulations & Virtual Internships</h3>
+<h3>Industry Simulations and Virtual Internships</h3>
 
 - ✅ **[Deloitte Cybersecurity Simulation](https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_4yHEByFJwhmmE2ekD_1752751473837_completion_certificate.pdf)**
   - Conducted vulnerability assessments and penetration testing
@@ -124,7 +124,7 @@
   - Analyzed large datasets for pattern recognition
   - Created predictive analytics dashboards
 
-<h2>📚 Certifications & Training</h2>
+<h2>📚 Certifications and Training</h2>
 
 - **[Google Professional Cybersecurity Certificate](https://www.coursera.org/account/accomplishments/professional-cert/NJ06LAXOT3R4)** (Completed 2025)
   - 8-course comprehensive program covering security fundamentals, network security, incident response, and Python automation
@@ -139,7 +139,7 @@
   - Risk assessments, security controls, compliance
 - **Network Security**: [Certificate](https://coursera.org/verify/DKAND3ULAGT0)
   - TCP/IP, subnetting, firewall configuration, VPNs
-- **Linux & SQL Security**: [Certificate](https://coursera.org/verify/8HYG23DYBTTO)
+- **Linux and SQL Security**: [Certificate](https://coursera.org/verify/8HYG23DYBTTO)
   - System hardening, database security, log analysis
 
 **Quick References**:
@@ -150,11 +150,11 @@
 
 <h2>🎓 Education</h2>
 
-- **MS Cybersecurity** (2025–2027) – Northeastern University, Boston
-  - Relevant Coursework: Software Vulnerabilities & Security (CS-5770), Cybersecurity Technologies, Threats & Defense (CY5001), Network Forensics
+- **MS Cybersecurity** (2025 to 2027) -- Northeastern University, Boston
+  - Relevant Coursework: Software Vulnerabilities and Security (CS-5770), Cybersecurity Technologies, Threats and Defense (CY5001), Network Forensics
   - Focus: Applied cryptography, secure systems, threat analysis
 
-- **B.Tech AI & Data Science** (2021–2025) – Vardhaman College of Engineering
+- **B.Tech AI and Data Science** (2021 to 2025) -- Vardhaman College of Engineering
   - Focus: Machine Learning, Data Mining, Statistical Analysis
   - GPA: 3.8/4.0
   - Capstone: AI-based Intrusion Detection System
@@ -163,9 +163,9 @@
 
 **Malware Analysis**: PEStudio • CAPA • Ghidra • YARA • CAPE Sandbox • Any.run • winpmem • Volatility 3  
 **Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
-**Identity & Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
+**Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
-**AI & Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
+**AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
 **Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
 **Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure  
