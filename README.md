@@ -5,12 +5,26 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>Zeek Network Forensics + Beacon Detection (CASE-18)</b>
+  - Ran Zeek 8.2.1 against a real SSLoad + Cobalt Strike PCAP (6.4MB, MTA 2024-04-18), generating 17 structured logs including conn.log, dns.log, ssl.log, kerberos.log, and ldap.log
+  - Imported Zeek logs into RITA v5.1.2; scored all external connections for beacon regularity -- 85.239.53.219 flagged with rare_signature:SSLoad/1.1, beacon score 0.504, mean interval 477 seconds across 11 connections
+  - Built 3 Jupyter threat hunting notebooks: conn.log duration analysis, DNS query profiling, and beacon interval visualization confirming C2 sleep timer pattern
+  - Mapped findings to 6 MITRE ATT&CK techniques (T1071, T1071.004, T1008, T1095, T1557, T1018); produced IOC table and 2 Sigma detection rules in a full investigation report PDF
+  - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
+
 - <b>Malware Analysis Lab: AgentTesla Static, Dynamic + Memory Forensics</b>
   - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2; identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
   - Wrote 3 custom YARA rules from extracted indicators (imphash, MurmurHash seed bytes, structural heuristics) validated with YARA 4.5.5; zero false positives across System32
   - Detonated the sample in Any.run sandbox; confirmed Stealc/Vidar stealer behavior, 32 dropped files targeting Chrome/Edge credential stores, 87 IOCs, 11 MITRE ATT&CK techniques mapped
   - Acquired live memory from FlareVM with winpmem v4.0-rc1 (7GB dump), analyzed with Volatility 3; detected PAGE_EXECUTE_READWRITE code injection in SearchApp.exe and powershell.exe
   - [GitHub Repo](https://github.com/ronankongala/malware-analysis-lab)
+
+- <b>AppSec Pipeline + Secrets Management Lab</b>
+  - Wrapped OWASP WebGoat with a 3-gate CI/CD security pipeline: Semgrep SAST (66 findings across 1,002 files), Checkov (3 Dockerfile misconfigurations), Trivy (71 CVEs in container image)
+  - OWASP ZAP active scan (961 requests) found 8 vulnerability categories including missing CSRF protections
+  - Migrated credentials into HashiCorp Vault KV engine with secret rotation demo; configured Okta OIDC SSO with MFA enforcement via Okta Verify
+  - Mapped full environment against 16 PCI-DSS 4.0 requirements with an accepted risk register
+  - [GitHub Repo](https://github.com/ronankongala/Appsec-pipeline-lab)
 
 - <b>Access-Governed RAG Console (LLM Access Control + Entra ID SSO)</b>
   - Built a RAG assistant that enforces role-based access control at the retrieval layer, so restricted documents are excluded from a non-authorized user's candidate set before the model ever sees them
@@ -161,8 +175,9 @@
 
 <h2>💼 Technical Skills</h2>
 
+**Network Forensics**: Zeek • RITA • Wireshark • Beacon Detection • PCAP Analysis • Jupyter  
 **Malware Analysis**: PEStudio • CAPA • Ghidra • YARA • CAPE Sandbox • Any.run • winpmem • Volatility 3  
-**Security Tools**: Splunk • Microsoft Sentinel • Wireshark • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
+**Security Tools**: Splunk • Microsoft Sentinel • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
 **Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
 **AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
@@ -185,4 +200,4 @@
 </p>
 
 ---
-*Currently seeking Summer/Fall 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Malware Analysis, Detection Engineering, or AI/LLM Security*
+*Currently seeking Summer/Fall 2027 cybersecurity co-op/internship opportunities in Security Operations, Incident Response, Malware Analysis, Detection Engineering, Network Forensics, or AI/LLM Security*
