@@ -48,7 +48,7 @@
   - Engineered a serverless threat detection pipeline using CloudTrail, Lambda, SNS, and DynamoDB
   - Implemented 11 detection rules mapped to MITRE ATT&CK, covering Defense Evasion, Privilege Escalation, and Credential Access
   - Confirmed end-to-end real-time email alerting with 100% Lambda execution success rate across 6 invocations
-  - [GitHub Repo](https://github.com/ronankongala/-aws-cloudtrail-threat-detector)
+  - [GitHub Repo](https://github.com/ronankongala/aws-cloudtrail-threat-detector)
 
 - <b>Suricata IDS + ELK Stack on AWS EC2</b>
   - Deployed Suricata 7.0.3 IDS on AWS EC2 with custom detection rules monitoring live network traffic
@@ -60,7 +60,7 @@
   - Built a Python (boto3) tool to audit AWS S3 buckets for misconfigurations
   - Performed 6 security checks per bucket covering public ACL, encryption, versioning, and logging with severity classification
   - Generated structured JSON risk reports for remediation tracking
-  - [GitHub Repo](https://github.com/ronankongala/-s3-security-auditor)
+  - [GitHub Repo](https://github.com/ronankongala/s3-security-auditor)
 
 - <b>SOC Automation Lab with AI Threat Analysis</b>
   - Built end-to-end security pipeline: Windows to Splunk to n8n to OpenAI to Slack
@@ -98,14 +98,14 @@
   - Hands-on security challenges: network forensics, web exploitation, privilege escalation
   - Documented methodologies for packet analysis, SQL injection, command injection, Unix security
   - Tools: Wireshark, Nmap, Burp Suite, SQL injection techniques, privilege escalation
-  - [GitHub Repo](https://github.com/ronankongala/CS-5770-Software-Vulnerabilities-Security)
+  - _Private repo (course policy). Write-ups available on request._
 
 - <b>CY5001: Cybersecurity Technologies, Threats and Defense</b>
   - Comprehensive coursework in Linux security, cryptography, and network defense
   - Implemented GPG/PGP encryption, OpenSSL operations, digital signatures, and hybrid encryption
   - Built automated security scripts for system hardening and threat detection
   - Skills: Linux administration, Bash scripting, AES/RSA encryption, digital envelopes, log analysis
-  - [GitHub Repo](https://github.com/ronankongala/CY5001-Cybersecurity-Skills)
+  - _Private repo (course policy). Write-ups available on request._
 
 <h2>🏆 Professional Experience</h2>
 
