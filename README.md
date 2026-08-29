@@ -5,6 +5,12 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>Authorized Penetration Test, Metasploit Lab (CASE-19)</b>
+  - Conducted authorized penetration tests against two targets, a self-hosted Metasploitable2 VM and the TryHackMe Blue room, enumerating services with Nmap from Kali Linux before exploitation
+  - Exploited 3 CVEs with the Metasploit Framework: CVE-2011-2523 (vsftpd backdoor), CVE-2007-2447 (Samba RCE), and CVE-2017-0144 (EternalBlue)
+  - Documented 4 findings in a structured pentest report with CVSS scoring, MITRE ATT&CK mapping, and per-finding remediation recommendations
+  - [GitHub Repo](https://github.com/ronankongala/metasploit-pentest-report)
+
 - <b>Zeek Beacon Detector (OCaml) -- CASE-18</b>
   - Ported the CASE-17 Python and RITA beacon-scoring logic to OCaml as a single-file dune executable, reimplementing interval-variance detection functionally to compare imperative and functional approaches to the same detection problem
   - Parses Zeek conn.log rows and groups them by source IP through Map.Make(String) at O(n log k), sorting per-IP timestamps and folding consecutive inter-arrival gaps into a population variance with List.fold_left -- no mutable state anywhere in the scoring path
