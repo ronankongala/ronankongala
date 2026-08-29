@@ -5,12 +5,12 @@
 
 <h2>🚀 Featured Projects</h2>
 
-- <b>Zeek Network Forensics + Beacon Detection (CASE-18)</b>
+- <b>Zeek Network Forensics + Beacon Detection (CASE-17)</b>
   - Ran Zeek 8.2.1 against a real SSLoad + Cobalt Strike PCAP (6.4MB, MTA 2024-04-18), generating 17 structured logs including conn.log, dns.log, ssl.log, kerberos.log, and ldap.log
   - Imported Zeek logs into RITA v5.1.2; scored all external connections for beacon regularity -- 85.239.53.219 flagged with rare_signature:SSLoad/1.1, beacon score 0.504, mean interval 477 seconds across 11 connections
   - Built 3 Jupyter threat hunting notebooks: conn.log duration analysis, DNS query profiling, and beacon interval visualization confirming C2 sleep timer pattern
   - Mapped findings to 6 MITRE ATT&CK techniques (T1071, T1071.004, T1008, T1095, T1557, T1018); produced IOC table and 2 Sigma detection rules in a full investigation report PDF
-  - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
+  - [GitHub Repo](https://github.com/ronankongala/zeek-beacon-ocaml)
 
 - <b>Malware Analysis Lab: AgentTesla Static, Dynamic + Memory Forensics</b>
   - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2; identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
