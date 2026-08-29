@@ -5,6 +5,13 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>Zeek Beacon Detector (OCaml) -- CASE-18</b>
+  - Ported the CASE-17 Python and RITA beacon-scoring logic to OCaml as a single-file dune executable, reimplementing interval-variance detection functionally to compare imperative and functional approaches to the same detection problem
+  - Parses Zeek conn.log rows and groups them by source IP through Map.Make(String) at O(n log k), sorting per-IP timestamps and folding consecutive inter-arrival gaps into a population variance with List.fold_left -- no mutable state anywhere in the scoring path
+  - Flags low-variance periodic senders as C2 beacon candidates at min_conns = 5 and a 5.0 seconds squared variance threshold; isolates 10.0.0.5 at a 477.1s mean interval and variance 1.84 across 6 connections against two high-variance talkers
+  - Modeled results as a beacon_verdict variant (TooFewConns, HighVariance, BeaconCandidate), making an unscored IP structurally unrepresentable at the output printer and removing the sentinel-plus-assert guard the Python version required
+  - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
+
 - <b>Zeek Network Forensics + Beacon Detection (CASE-17)</b>
   - Ran Zeek 8.2.1 against a real SSLoad + Cobalt Strike PCAP (6.4MB, MTA 2024-04-18), generating 17 structured logs including conn.log, dns.log, ssl.log, kerberos.log, and ldap.log
   - Imported Zeek logs into RITA v5.1.2; scored all external connections for beacon regularity -- 85.239.53.219 flagged with rare_signature:SSLoad/1.1, beacon score 0.504, mean interval 477 seconds across 11 connections
