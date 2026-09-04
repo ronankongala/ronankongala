@@ -5,6 +5,13 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>GuardDutySync: GuardDuty to MITRE ATT&CK to Jira Pipeline (CASE-20)</b>
+  - Built a 3-stage Python pipeline that polls AWS GuardDuty findings with boto3 through an IAM user scoped to AmazonGuardDutyReadOnlyAccess, validated against 434 sample findings in us-east-1
+  - Mapped 13 GuardDuty finding types to 12 MITRE ATT&CK techniques with a hand-built lookup table, resolving full technique name, tactic, and description from the MITRE enterprise-attack STIX bundle
+  - Auto-created structured Jira Cloud tickets over the REST API carrying every MITRE enrichment field, with GuardDuty severity mapped from a 0 to 10 float onto High, Medium, and Low priority
+  - Added local-state deduplication so reruns are idempotent: 10 alerts fetched and 10 tickets created with 0 errors, then 10 duplicates skipped and 0 tickets created on the second run
+  - [GitHub Repo](https://github.com/ronankongala/guardduty-sync)
+
 - <b>Authorized Penetration Test, Metasploit Lab (CASE-19)</b>
   - Conducted authorized penetration tests against two targets, a self-hosted Metasploitable2 VM and the TryHackMe Blue room, enumerating services with Nmap from Kali Linux before exploitation
   - Exploited 3 CVEs with the Metasploit Framework: CVE-2011-2523 (vsftpd backdoor), CVE-2007-2447 (Samba RCE), and CVE-2017-0144 (EternalBlue)
