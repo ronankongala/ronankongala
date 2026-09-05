@@ -5,6 +5,14 @@
 
 <h2>🚀 Featured Projects</h2>
 
+- <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-21)</b>
+  - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
+  - Scored on recall at a fixed 3% false-positive budget rather than accuracy: RandomForest led at 0.748 ROC-AUC and 16.0% recall, catching 649 of 4,064 held-out fraud cases; logistic regression matched it on AUC (0.742) at a third of the recall, so AUC alone would have picked the wrong model
+  - Reported the drop from the synthetic run's ~0.98 AUC as the finding rather than burying it, since the synthetic fraud signal was hand-designed and therefore learnable in a way real fraud is not
+  - Ran a subgroup false-positive-rate audit that surfaced a 23.7-point spread across merchant categories (electronics 23.9% vs online_retail 0.24%), flagged for investigation before production use, and documented the geo-mismatch signal as degenerate under the pseudo-customer-ID reconstruction instead of claiming a fairness pass
+  - Added SHAP TreeExplainer attribution (top drivers: amount, hour_of_day, merchant_category_electronics), a SQLite alert case-management layer with audit trail, and a full GDPR Article 35 DPIA with Article 15 access and Article 17 erasure handling
+  - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
+
 - <b>GuardDutySync: GuardDuty to MITRE ATT&CK to Jira Pipeline (CASE-20)</b>
   - Built a 3-stage Python pipeline that polls AWS GuardDuty findings with boto3 through an IAM user scoped to AmazonGuardDutyReadOnlyAccess, validated against 434 sample findings in us-east-1
   - Mapped 13 GuardDuty finding types to 12 MITRE ATT&CK techniques with a hand-built lookup table, resolving full technique name, tactic, and description from the MITRE enterprise-attack STIX bundle
@@ -198,9 +206,10 @@
 **Network Forensics**: Zeek • RITA • Wireshark • Beacon Detection • PCAP Analysis • Jupyter  
 **Malware Analysis**: PEStudio • CAPA • Ghidra • YARA • CAPE Sandbox • Any.run • winpmem • Volatility 3  
 **Security Tools**: Splunk • Microsoft Sentinel • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
-**Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC  
+**Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC • GDPR (Article 35 DPIA, Articles 15/17)  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
 **AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
+**ML and Model Assurance**: scikit-learn • XGBoost • SHAP • imbalanced-learn (SMOTE) • Subgroup Fairness Auditing • Model Explainability  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
 **Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
 **Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure  
