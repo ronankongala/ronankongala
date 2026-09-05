@@ -5,7 +5,7 @@
 
 <h2>🚀 Featured Projects</h2>
 
-- <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-21)</b>
+- <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
   - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
   - Scored on recall at a fixed 3% false-positive budget rather than accuracy: RandomForest led at 0.748 ROC-AUC and 16.0% recall, catching 649 of 4,064 held-out fraud cases; logistic regression matched it on AUC (0.742) at a third of the recall, so AUC alone would have picked the wrong model
   - Reported the drop from the synthetic run's ~0.98 AUC as the finding rather than burying it, since the synthetic fraud signal was hand-designed and therefore learnable in a way real fraud is not
