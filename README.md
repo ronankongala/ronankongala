@@ -13,6 +13,14 @@
   - Added SHAP TreeExplainer attribution (top drivers: amount, hour_of_day, merchant_category_electronics), a SQLite alert case-management layer with audit trail, and a full GDPR Article 35 DPIA with Article 15 access and Article 17 erasure handling
   - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
 
+- <b>FedRAMP RMF Compliance Lab: STIG Hardening, OpenSCAP + POA&M (CASE-21)</b>
+  - Carried a single Ubuntu 24.04 LTS host through a full FedRAMP Moderate RMF cycle: baseline OpenSCAP scan, Ansible remediation, then reassessment with the identical profile and datastream so the delta reflects remediation and nothing else
+  - Raised the DISA STIG V1R5 compliance score from 69.58% to 78.06% (+8.48 points), moving 28 passed / 11 failed to 38 passed / 7 failed through 13 Ansible configuration changes applied with 0 failures
+  - Built SCAP content from ComplianceAsCode 0.1.83 source for the ubuntu2404 product rather than the pre-packaged distro content, which lags upstream, pinning the benchmark to STIG V1R5 exactly
+  - Tracked all 7 residual findings in a POA&M keyed to real DISA STIG rule IDs with risk level, owner, and target date, separating environment-inherent items (UBTU-24-600090, filesystem encryption at rest, unavailable under WSL2) from items needing a configuration decision (UBTU-24-100850, UBTU-24-400360, UBTU-24-400370)
+  - Produced the assessor-facing package: an SSP summary with FIPS 199 categorization across all 20 NIST SP 800-53 Rev 5 families, a 52-control FedRAMP Moderate matrix splitting inherited versus customer responsibility, a 10-control CIS/STIG/NIST crosswalk, and a SOX/COSO access certification over 15 users across 3 systems
+  - [GitHub Repo](https://github.com/ronankongala/fedramp-rmf-lab)
+
 - <b>GuardDutySync: GuardDuty to MITRE ATT&CK to Jira Pipeline (CASE-20)</b>
   - Built a 3-stage Python pipeline that polls AWS GuardDuty findings with boto3 through an IAM user scoped to AmazonGuardDutyReadOnlyAccess, validated against 434 sample findings in us-east-1
   - Mapped 13 GuardDuty finding types to 12 MITRE ATT&CK techniques with a hand-built lookup table, resolving full technique name, tactic, and description from the MITRE enterprise-attack STIX bundle
