@@ -39,14 +39,14 @@
   - Parses Zeek conn.log rows and groups them by source IP through Map.Make(String) at O(n log k), sorting per-IP timestamps and folding consecutive inter-arrival gaps into a population variance with List.fold_left -- no mutable state anywhere in the scoring path
   - Flags low-variance periodic senders as C2 beacon candidates at min_conns = 5 and a 5.0 seconds squared variance threshold; isolates 10.0.0.5 at a 477.1s mean interval and variance 1.84 across 6 connections against two high-variance talkers
   - Modeled results as a beacon_verdict variant (TooFewConns, HighVariance, BeaconCandidate), making an unscored IP structurally unrepresentable at the output printer and removing the sentinel-plus-assert guard the Python version required
-  - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
+  - [GitHub Repo](https://github.com/ronankongala/zeek-beacon-ocaml)
 
 - <b>Zeek Network Forensics + Beacon Detection (CASE-17)</b>
   - Ran Zeek 8.2.1 against a real SSLoad + Cobalt Strike PCAP (6.4MB, MTA 2024-04-18), generating 17 structured logs including conn.log, dns.log, ssl.log, kerberos.log, and ldap.log
   - Imported Zeek logs into RITA v5.1.2; scored all external connections for beacon regularity -- 85.239.53.219 flagged with rare_signature:SSLoad/1.1, beacon score 0.504, mean interval 477 seconds across 11 connections
   - Built 3 Jupyter threat hunting notebooks: conn.log duration analysis, DNS query profiling, and beacon interval visualization confirming C2 sleep timer pattern
   - Mapped findings to 6 MITRE ATT&CK techniques (T1071, T1071.004, T1008, T1095, T1557, T1018); produced IOC table and 2 Sigma detection rules in a full investigation report PDF
-  - [GitHub Repo](https://github.com/ronankongala/zeek-beacon-ocaml)
+  - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
 
 - <b>Malware Analysis Lab: AgentTesla Static, Dynamic + Memory Forensics</b>
   - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2; identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
@@ -144,6 +144,21 @@
   - _Private repo (course policy). Write-ups available on request._
 
 <h2>🏆 Professional Experience</h2>
+
+<h3>Security Engineering Co-op</h3>
+
+- **AI Cybersecurity Intern** at Abbott, Madison WI (Hybrid) &middot; Sep 2026 to Present
+  - Contributing to ExmanIq, an internal vulnerability management platform monitoring 22,000+ tracked vulnerabilities across organizational assets using a predictive Impact x Likelihood risk model enriched with EPSS and NVD threat intelligence
+  - Diagnosed a 27-day silent data-pipeline failure by recognizing an anomalous flat trend in the platform's composite risk score
+  - Built CrowdCheck Hive with a teammate, correlating CrowdStrike, Microsoft Intune, and ServiceNow CMDB data to identify device coverage gaps across the organization's endpoint security controls
+  - Python, Microsoft Azure Machine Learning
+
+- **Cybersecurity Intern** at Exact Sciences, Madison WI (Hybrid) &middot; Jun 2026 to Sep 2026
+  - Built Baseline Guardian with a teammate, correlating data across multiple internal systems (CrowdStrike, Microsoft Intune, Tanium, ServiceNow CMDB) to assess security posture and endpoint compliance
+  - Automated KeyCheck, a credential-risk monitoring pipeline scanning 1,300+ application registrations to identify expiring-credential risk before it became an incident
+
+- **Teaching Assistant, CY5001** at Northeastern University, Khoury College &middot; Jan 2026 to Apr 2026
+  - Ran lab sessions and graded 200+ assignments for 61 graduate students in Cybersecurity Threats and Defenses, resolving 150+ Piazza queries within a 24-hour SLA
 
 <h3>Industry Simulations and Virtual Internships</h3>
 
