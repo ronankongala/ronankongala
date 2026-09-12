@@ -183,17 +183,17 @@ _Selected work below. The full log of 22 cases, filterable by tag, lives at [ron
 
 <h3>Internships</h3>
 
-- **[NIELIT Cybersecurity Internship](./Cyber%20security%20NIELIT%20internship.pdf)** (Summer 2024)
+- **[NIELIT Cybersecurity Internship](./Cyber%20security%20NIELIT%20internship.pdf)** (Aug 2024 to Oct 2024)
   - Monitored SOC operations and analyzed security alerts
   - Configured SIEM rules and correlation policies
   - Participated in incident response exercises
 
-- **[Quizaro Web Development](./Quizaro%20web%20development%20internship.pdf)** (Spring 2024)
+- **[Quizaro Web Development](./Quizaro%20web%20development%20internship.pdf)** (Feb 2024 to Apr 2024)
   - Developed secure web applications with input validation
   - Implemented OAuth 2.0 and session management
   - Conducted security code reviews
 
-- **[Rejolt Data Science](./Rejolt%20data%20science%20internship.pdf)** (Winter 2023)
+- **[Rejolt Data Science](./Rejolt%20data%20science%20internship.pdf)** (Oct 2023 to Nov 2023)
   - Built ML models for anomaly detection
   - Analyzed large datasets for pattern recognition
   - Created predictive analytics dashboards
