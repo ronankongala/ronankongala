@@ -2,8 +2,6 @@
 
 **AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
-I build the systems that notice things: detection pipelines, cloud honeypots, malware forensics, and risk scoring that turns raw signal into a decision someone can act on.
-
 ### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 22 case studies with full write-ups
 
 <a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
