@@ -2,7 +2,7 @@
 
 **AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
-### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 22 case studies with full write-ups
+### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 23 case studies with full write-ups
 
 <a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
 <a href="mailto:kongalaronan@gmail.com">kongalaronan@gmail.com</a> &middot;
@@ -10,7 +10,7 @@ Boston, MA
 
 <h2>🚀 Featured Projects</h2>
 
-_Selected work below. The full log of 22 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+_Selected work below. The full log of 23 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
 
 - <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
   - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
@@ -19,6 +19,15 @@ _Selected work below. The full log of 22 cases, filterable by tag, lives at [ron
   - Ran a subgroup false-positive-rate audit that surfaced a 23.7-point spread across merchant categories (electronics 23.9% vs online_retail 0.24%), flagged for investigation before production use, and documented the geo-mismatch signal as degenerate under the pseudo-customer-ID reconstruction instead of claiming a fairness pass
   - Added SHAP TreeExplainer attribution (top drivers: amount, hour_of_day, merchant_category_electronics), a SQLite alert case-management layer with audit trail, and a full GDPR Article 35 DPIA with Article 15 access and Article 17 erasure handling
   - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
+
+- <b>Zero Trust Test Bed: mTLS, OIDC, OPA + Just-in-Time Vault Credentials (CASE-22)</b>
+  - Built a working zero trust test bed where 3 microservices sit behind a gateway and every request must clear 4 independent layers; only the gateway publishes a port, so there is no network path to the upstream services at all
+  - Mutual TLS across all 3 services, each presenting a lab-CA certificate and requiring one from the caller, verified through openssl s_client, with identity bound to the certificate rather than the source address
+  - Open Policy Agent as the per-request decision point, 7 of 7 Rego unit tests passing on both sides of every rule, then proved live: testuser and manageruser hit an identical endpoint and get 403 and 200, differing only in token roles
+  - Replaced standing privilege with a 20 second non-renewable Vault AppRole credential for order deletion, demonstrated minted, used inside its TTL, then rejected after expiry
+  - Verified encryption rather than asserting it, with tcpdump on the bridge network showing TLS records and no legible HTTP method, path or body against a plaintext baseline captured before mTLS
+  - Added 2 SAML 2.0 service providers for federated SSO with distinct session cookies, and mapped every control plus the lab's known gaps to the 7 NIST SP 800-207 tenets
+  - [GitHub Repo](https://github.com/ronankongala/zerotrust-lab)
 
 - <b>FedRAMP RMF Compliance Lab: STIG Hardening, OpenSCAP + POA&M (CASE-21)</b>
   - Carried a single Ubuntu 24.04 LTS host through a full FedRAMP Moderate RMF cycle: baseline OpenSCAP scan, Ansible remediation, then reassessment with the identical profile and datastream so the delta reflects remediation and nothing else
@@ -241,13 +250,14 @@ _Selected work below. The full log of 22 cases, filterable by tag, lives at [ron
 **AppSec and CI/CD**: Semgrep • Trivy • Checkov • GitHub Actions • Terraform • HashiCorp Vault • Okta OIDC  
 **Endpoint and Asset**: CrowdStrike • Microsoft Intune • Tanium • ServiceNow CMDB  
 **Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Conditional Access • NIST 800-171 • CMMC • FedRAMP Moderate • SOX/COSO • GDPR (Article 35 DPIA, Articles 15/17)  
+**Zero Trust and Access Control**: Keycloak (OIDC / SAML 2.0) • Open Policy Agent • Rego • mutual TLS / PKI • HashiCorp Vault just-in-time credentials • NIST SP 800-207  
 **Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • GCP • Azure • Azure App Service  
 **AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense • Jira REST API  
 **ML and Model Assurance**: scikit-learn • XGBoost • SHAP • imbalanced-learn (SMOTE) • Subgroup Fairness Auditing • Model Explainability  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
 **Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript • OCaml  
 **Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure • GCP • Ansible  
-**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-53 Rev 5 • NIST SP 800-171 • NIST CSF • CMMC • FedRAMP • CIS Controls • OWASP Top 10 • PCI DSS 4.0 • SOC 2  
+**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-207 • NIST SP 800-53 Rev 5 • NIST SP 800-171 • NIST CSF • CMMC • FedRAMP • CIS Controls • OWASP Top 10 • PCI DSS 4.0 • SOC 2  
 
 <h2>📫 Connect With Me</h2>
 <p>
