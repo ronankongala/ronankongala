@@ -1,9 +1,18 @@
-<h1>Hi, I'm Ronan! <br/>
-  <a href="https://github.com/ronankongala">Cybersecurity Professional</a>, 
-  <a href="https://www.linkedin.com/in/ronan-kongala">MS Student @ Northeastern</a>
-</h1>
+<h1>Hi, I'm Ronan!</h1>
+
+**AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
+
+I build the systems that notice things: detection pipelines, cloud honeypots, malware forensics, and risk scoring that turns raw signal into a decision someone can act on.
+
+### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 22 case studies with full write-ups
+
+<a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
+<a href="mailto:kongalaronan@gmail.com">kongalaronan@gmail.com</a> &middot;
+Boston, MA
 
 <h2>🚀 Featured Projects</h2>
+
+_Selected work below. The full log of 22 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
 
 - <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
   - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
@@ -226,17 +235,21 @@
 
 <h2>💼 Technical Skills</h2>
 
-**Network Forensics**: Zeek • RITA • Wireshark • Beacon Detection • PCAP Analysis • Jupyter  
+**Network Forensics**: Zeek • RITA • Wireshark • Beacon Detection • PCAP Analysis • Jupyter • Sigma Rules  
 **Malware Analysis**: PEStudio • CAPA • Ghidra • YARA • CAPE Sandbox • Any.run • winpmem • Volatility 3  
-**Security Tools**: Splunk • Microsoft Sentinel • Metasploit • Nmap • Burp Suite • Nessus • Suricata  
-**Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Microsoft Intune • Conditional Access • NIST 800-171 • CMMC • GDPR (Article 35 DPIA, Articles 15/17)  
-**Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • Azure • Azure App Service  
-**AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense  
+**Vulnerability Management**: Nessus • OpenSCAP • DISA STIG • EPSS • NVD • CVSS v3.0 • Risk Scoring • POA&M  
+**Detection and SIEM**: Splunk • Microsoft Sentinel • KQL • Suricata • Elastic/ELK • AWS GuardDuty  
+**Offensive Security**: Metasploit • Nmap • Burp Suite • Kali Linux • OWASP ZAP  
+**AppSec and CI/CD**: Semgrep • Trivy • Checkov • GitHub Actions • Terraform • HashiCorp Vault • Okta OIDC  
+**Endpoint and Asset**: CrowdStrike • Microsoft Intune • Tanium • ServiceNow CMDB  
+**Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Conditional Access • NIST 800-171 • CMMC • FedRAMP Moderate • SOX/COSO • GDPR (Article 35 DPIA, Articles 15/17)  
+**Cloud Security**: AWS CloudTrail • AWS Lambda • Amazon S3 • boto3 • GCP • Azure • Azure App Service  
+**AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense • Jira REST API  
 **ML and Model Assurance**: scikit-learn • XGBoost • SHAP • imbalanced-learn (SMOTE) • Subgroup Fairness Auditing • Model Explainability  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
-**Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript  
-**Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure  
-**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-171 • CMMC • CIS Controls • OWASP Top 10 • SOC 2  
+**Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript • OCaml  
+**Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure • GCP • Ansible  
+**Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-53 Rev 5 • NIST SP 800-171 • NIST CSF • CMMC • FedRAMP • CIS Controls • OWASP Top 10 • PCI DSS 4.0 • SOC 2  
 
 <h2>📫 Connect With Me</h2>
 <p>
