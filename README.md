@@ -225,12 +225,12 @@ _Selected work below. The full log of 22 cases, filterable by tag, lives at [ron
 <h2>🎓 Education</h2>
 
 - **MS Cybersecurity** (2025 to 2027) -- Northeastern University, Boston
+  - GPA: 3.86/4.0
   - Relevant Coursework: Software Vulnerabilities and Security (CS-5770), Cybersecurity Technologies, Threats and Defense (CY5001), Network Forensics
   - Focus: Applied cryptography, secure systems, threat analysis
 
 - **B.Tech AI and Data Science** (2021 to 2025) -- Vardhaman College of Engineering
   - Focus: Machine Learning, Data Mining, Statistical Analysis
-  - GPA: 3.8/4.0
   - Capstone: AI-based Intrusion Detection System
 
 <h2>💼 Technical Skills</h2>
