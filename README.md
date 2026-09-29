@@ -2,7 +2,7 @@
 
 **AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
-### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 23 case studies with full write-ups
+### 🔗 [ronankongala.github.io](https://ronankongala.github.io) &middot; 24 case studies with full write-ups
 
 <a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
 <a href="mailto:kongalaronan@gmail.com">kongalaronan@gmail.com</a> &middot;
@@ -10,7 +10,7 @@ Boston, MA
 
 <h2>🚀 Featured Projects</h2>
 
-_Selected work below. The full log of 23 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+_Selected work below. The full log of 24 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
 
 - <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
   - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
@@ -19,6 +19,13 @@ _Selected work below. The full log of 23 cases, filterable by tag, lives at [ron
   - Ran a subgroup false-positive-rate audit that surfaced a 23.7-point spread across merchant categories (electronics 23.9% vs online_retail 0.24%), flagged for investigation before production use, and documented the geo-mismatch signal as degenerate under the pseudo-customer-ID reconstruction instead of claiming a fairness pass
   - Added SHAP TreeExplainer attribution (top drivers: amount, hour_of_day, merchant_category_electronics), a SQLite alert case-management layer with audit trail, and a full GDPR Article 35 DPIA with Article 15 access and Article 17 erasure handling
   - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
+
+- <b>VulnTrack: Full-Stack Vulnerability Management with a DevSecOps Pipeline (CASE-23)</b>
+  - Built a Spring Boot 4 REST API on Java 21 with PostgreSQL, Flyway migrations, and JWT authentication, plus a React and TypeScript dashboard with severity color-coding and severity and status filters
+  - Validated a 7-stage Jenkins pipeline's SonarQube SAST gate against injected defects: it failed on a BLOCKER java:S6437 and a CRITICAL java:S5547, then passed once both were removed
+  - Deployed backend, frontend, and PostgreSQL to Kubernetes with a Helm chart, all 3 pods running with 0 restarts
+  - Ran manual Burp Suite DAST against the OWASP Top 10, documenting a missing CSP header, confirmed JWT enforcement, and non-exploitable SQL injection on filter parameters
+  - [GitHub Repo](https://github.com/ronankongala/vulntrack)
 
 - <b>Zero Trust Test Bed: mTLS, OIDC, OPA + Just-in-Time Vault Credentials (CASE-22)</b>
   - Built a working zero trust test bed where 3 microservices sit behind a gateway and every request must clear 4 independent layers; only the gateway publishes a port, so there is no network path to the upstream services at all
@@ -247,7 +254,7 @@ _Selected work below. The full log of 23 cases, filterable by tag, lives at [ron
 **Vulnerability Management**: Nessus • OpenSCAP • DISA STIG • EPSS • NVD • CVSS v3.0 • Risk Scoring • POA&M  
 **Detection and SIEM**: Splunk • Microsoft Sentinel • KQL • Suricata • Elastic/ELK • AWS GuardDuty  
 **Offensive Security**: Metasploit • Nmap • Burp Suite • Kali Linux • OWASP ZAP  
-**AppSec and CI/CD**: Semgrep • Trivy • Checkov • GitHub Actions • Terraform • HashiCorp Vault • Okta OIDC  
+**AppSec and CI/CD**: Semgrep • SonarQube • Trivy • Checkov • Jenkins • GitHub Actions • Terraform • HashiCorp Vault • Okta OIDC  
 **Endpoint and Asset**: CrowdStrike • Microsoft Intune • Tanium • ServiceNow CMDB  
 **Identity and Compliance**: Active Directory • Group Policy • Microsoft Entra ID • Conditional Access • NIST 800-171 • CMMC • FedRAMP Moderate • SOX/COSO • GDPR (Article 35 DPIA, Articles 15/17)  
 **Zero Trust and Access Control**: Keycloak (OIDC / SAML 2.0) • Open Policy Agent • Rego • mutual TLS / PKI • HashiCorp Vault just-in-time credentials • NIST SP 800-207  
@@ -255,8 +262,8 @@ _Selected work below. The full log of 23 cases, filterable by tag, lives at [ron
 **AI and Automation**: Claude AI • OpenAI GPT-4 • n8n • Model Context Protocol (MCP) • RAG • LLM Security • Prompt Injection Defense • Jira REST API  
 **ML and Model Assurance**: scikit-learn • XGBoost • SHAP • imbalanced-learn (SMOTE) • Subgroup Fairness Auditing • Model Explainability  
 **Cryptography**: OpenSSL • GPG/PGP • AES • RSA • Digital Signatures  
-**Programming**: Python • SQL • Bash • PowerShell • KQL • JavaScript • OCaml  
-**Platforms**: Linux • Windows Server • Docker • VMware • AWS • Azure • GCP • Ansible  
+**Programming**: Python • Java (Spring Boot) • SQL • Bash • PowerShell • KQL • JavaScript • TypeScript (React) • OCaml  
+**Platforms**: Linux • Windows Server • Docker • Kubernetes • Helm • PostgreSQL • VMware • AWS • Azure • GCP • Ansible  
 **Frameworks**: MITRE ATT&CK • NIST SP 800-30 • NIST SP 800-207 • NIST SP 800-53 Rev 5 • NIST SP 800-171 • NIST CSF • CMMC • FedRAMP • CIS Controls • OWASP Top 10 • PCI DSS 4.0 • SOC 2  
 
 <h2>📫 Connect With Me</h2>
