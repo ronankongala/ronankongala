@@ -13,69 +13,57 @@ Boston, MA
 _Selected work below. The full log of 24 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
 
 - <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
-  - Built an end-to-end transaction fraud pipeline on the real IEEE-CIS dataset, engineering velocity, amount-deviation, geo-mismatch, and temporal features, then comparing 4 models on a time-based split so future fraud patterns cannot leak backward into training
-  - Scored on recall at a fixed 3% false-positive budget rather than accuracy: RandomForest led at 0.748 ROC-AUC and 16.0% recall, catching 649 of 4,064 held-out fraud cases; logistic regression matched it on AUC (0.742) at a third of the recall, so AUC alone would have picked the wrong model
-  - Reported the drop from the synthetic run's ~0.98 AUC as the finding rather than burying it, since the synthetic fraud signal was hand-designed and therefore learnable in a way real fraud is not
-  - Ran a subgroup false-positive-rate audit that surfaced a 23.7-point spread across merchant categories (electronics 23.9% vs online_retail 0.24%), flagged for investigation before production use, and documented the geo-mismatch signal as degenerate under the pseudo-customer-ID reconstruction instead of claiming a fairness pass
-  - Added SHAP TreeExplainer attribution (top drivers: amount, hour_of_day, merchant_category_electronics), a SQLite alert case-management layer with audit trail, and a full GDPR Article 35 DPIA with Article 15 access and Article 17 erasure handling
+  - Built a fraud detection pipeline on the real IEEE-CIS dataset, comparing 4 models on a time-based split
+  - RandomForest led at 0.748 ROC-AUC, catching 649 of 4,064 held-out fraud cases at a 3% false-positive budget
+  - Added SHAP explainability, a fairness audit that found a 23.7-point false-positive-rate spread, and a GDPR DPIA
   - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
 
 - <b>VulnTrack: Full-Stack Vulnerability Management with a DevSecOps Pipeline (CASE-23)</b>
-  - Built a Spring Boot 4 REST API on Java 21 with PostgreSQL, Flyway migrations, and JWT authentication, plus a React and TypeScript dashboard with severity color-coding and severity and status filters
-  - Validated a 7-stage Jenkins pipeline's SonarQube SAST gate against injected defects: it failed on a BLOCKER java:S6437 and a CRITICAL java:S5547, then passed once both were removed
-  - Deployed backend, frontend, and PostgreSQL to Kubernetes with a Helm chart, all 3 pods running with 0 restarts
-  - Ran manual Burp Suite DAST against the OWASP Top 10, documenting a missing CSP header, confirmed JWT enforcement, and non-exploitable SQL injection on filter parameters
+  - Built a Spring Boot 4 and React vulnerability tracker on PostgreSQL with JWT authentication
+  - Jenkins pipeline with a SonarQube SAST gate that caught a BLOCKER and a CRITICAL violation, then passed once both were fixed
+  - Deployed to Kubernetes with Helm (3 pods, 0 restarts) and documented Burp Suite DAST findings
   - [GitHub Repo](https://github.com/ronankongala/vulntrack)
 
 - <b>Zero Trust Test Bed: mTLS, OIDC, OPA + Just-in-Time Vault Credentials (CASE-22)</b>
-  - Built a working zero trust test bed where 3 microservices sit behind a gateway and every request must clear 4 independent layers; only the gateway publishes a port, so there is no network path to the upstream services at all
-  - Mutual TLS across all 3 services, each presenting a lab-CA certificate and requiring one from the caller, verified through openssl s_client, with identity bound to the certificate rather than the source address
-  - Open Policy Agent as the per-request decision point, 7 of 7 Rego unit tests passing on both sides of every rule, then proved live: testuser and manageruser hit an identical endpoint and get 403 and 200, differing only in token roles
-  - Replaced standing privilege with a 20 second non-renewable Vault AppRole credential for order deletion, demonstrated minted, used inside its TTL, then rejected after expiry
-  - Verified encryption rather than asserting it, with tcpdump on the bridge network showing TLS records and no legible HTTP method, path or body against a plaintext baseline captured before mTLS
-  - Added 2 SAML 2.0 service providers for federated SSO with distinct session cookies, and mapped every control plus the lab's known gaps to the 7 NIST SP 800-207 tenets
+  - Built 3 microservices where every request clears 4 layers: mutual TLS, Keycloak OIDC, OPA policy, and Vault credentials
+  - 7 of 7 Rego tests passing, with a live 403 versus 200 split driven only by token roles
+  - 20 second Vault credentials rejected after expiry; every control mapped to NIST SP 800-207
   - [GitHub Repo](https://github.com/ronankongala/zerotrust-lab)
 
 - <b>FedRAMP RMF Compliance Lab: STIG Hardening, OpenSCAP + POA&M (CASE-21)</b>
-  - Carried a single Ubuntu 24.04 LTS host through a full FedRAMP Moderate RMF cycle: baseline OpenSCAP scan, Ansible remediation, then reassessment with the identical profile and datastream so the delta reflects remediation and nothing else
-  - Raised the DISA STIG V1R5 compliance score from 69.58% to 78.06% (+8.48 points), moving 28 passed / 11 failed to 38 passed / 7 failed through 13 Ansible configuration changes applied with 0 failures
-  - Built SCAP content from ComplianceAsCode 0.1.83 source for the ubuntu2404 product rather than the pre-packaged distro content, which lags upstream, pinning the benchmark to STIG V1R5 exactly
-  - Tracked all 7 residual findings in a POA&M keyed to real DISA STIG rule IDs with risk level, owner, and target date, separating environment-inherent items (UBTU-24-600090, filesystem encryption at rest, unavailable under WSL2) from items needing a configuration decision (UBTU-24-100850, UBTU-24-400360, UBTU-24-400370)
-  - Produced the assessor-facing package: an SSP summary with FIPS 199 categorization across all 20 NIST SP 800-53 Rev 5 families, a 52-control FedRAMP Moderate matrix splitting inherited versus customer responsibility, a 10-control CIS/STIG/NIST crosswalk, and a SOX/COSO access certification over 15 users across 3 systems
+  - Carried an Ubuntu 24.04 host through a full FedRAMP Moderate RMF cycle with OpenSCAP and Ansible
+  - Raised the DISA STIG V1R5 score from 69.58% to 78.06% through 13 Ansible changes with 0 failures
+  - Tracked 7 residual findings in a POA&M and produced an SSP across all 20 NIST 800-53 Rev 5 families
   - [GitHub Repo](https://github.com/ronankongala/fedramp-rmf-lab)
 
 - <b>GuardDutySync: GuardDuty to MITRE ATT&CK to Jira Pipeline (CASE-20)</b>
-  - Built a 3-stage Python pipeline that polls AWS GuardDuty findings with boto3 through an IAM user scoped to AmazonGuardDutyReadOnlyAccess, validated against 434 sample findings in us-east-1
-  - Mapped 13 GuardDuty finding types to 12 MITRE ATT&CK techniques with a hand-built lookup table, resolving full technique name, tactic, and description from the MITRE enterprise-attack STIX bundle
-  - Auto-created structured Jira Cloud tickets over the REST API carrying every MITRE enrichment field, with GuardDuty severity mapped from a 0 to 10 float onto High, Medium, and Low priority
-  - Added local-state deduplication so reruns are idempotent: 10 alerts fetched and 10 tickets created with 0 errors, then 10 duplicates skipped and 0 tickets created on the second run
+  - Built a Python pipeline that polls AWS GuardDuty findings with boto3 and enriches them with MITRE ATT&CK data
+  - Mapped 13 finding types to 12 techniques and auto-created Jira tickets through the REST API
+  - Idempotent reruns: 10 tickets created on the first run, 10 duplicates skipped on the second
   - [GitHub Repo](https://github.com/ronankongala/guardduty-sync)
 
 - <b>Authorized Penetration Test, Metasploit Lab (CASE-19)</b>
-  - Conducted authorized penetration tests against two targets, a self-hosted Metasploitable2 VM and the TryHackMe Blue room, enumerating services with Nmap from Kali Linux before exploitation
+  - Ran authorized penetration tests against Metasploitable2 and TryHackMe Blue, with Nmap recon from Kali Linux
   - Exploited 3 CVEs with the Metasploit Framework: CVE-2011-2523 (vsftpd backdoor), CVE-2007-2447 (Samba RCE), and CVE-2017-0144 (EternalBlue)
-  - Documented 4 findings in a structured pentest report with CVSS scoring, MITRE ATT&CK mapping, and per-finding remediation recommendations
+  - Documented 4 findings with CVSS scoring, MITRE ATT&CK mapping, and remediation steps
   - [GitHub Repo](https://github.com/ronankongala/metasploit-pentest-report)
 
-- <b>Zeek Beacon Detector (OCaml) -- CASE-18</b>
-  - Ported the CASE-17 Python and RITA beacon-scoring logic to OCaml as a single-file dune executable, reimplementing interval-variance detection functionally to compare imperative and functional approaches to the same detection problem
-  - Parses Zeek conn.log rows and groups them by source IP through Map.Make(String) at O(n log k), sorting per-IP timestamps and folding consecutive inter-arrival gaps into a population variance with List.fold_left -- no mutable state anywhere in the scoring path
-  - Flags low-variance periodic senders as C2 beacon candidates at min_conns = 5 and a 5.0 seconds squared variance threshold; isolates 10.0.0.5 at a 477.1s mean interval and variance 1.84 across 6 connections against two high-variance talkers
-  - Modeled results as a beacon_verdict variant (TooFewConns, HighVariance, BeaconCandidate), making an unscored IP structurally unrepresentable at the output printer and removing the sentinel-plus-assert guard the Python version required
+- <b>Zeek Beacon Detector (OCaml) (CASE-18)</b>
+  - Ported the CASE-17 beacon-scoring logic to OCaml to compare imperative and functional approaches
+  - Groups Zeek conn.log connections by source IP and flags low-variance periodic senders as C2 beacon candidates
+  - Isolated 10.0.0.5 at a 477.1s mean interval and variance 1.84 against two high-variance talkers
   - [GitHub Repo](https://github.com/ronankongala/zeek-beacon-ocaml)
 
 - <b>Zeek Network Forensics + Beacon Detection (CASE-17)</b>
-  - Ran Zeek 8.2.1 against a real SSLoad + Cobalt Strike PCAP (6.4MB, MTA 2024-04-18), generating 17 structured logs including conn.log, dns.log, ssl.log, kerberos.log, and ldap.log
-  - Imported Zeek logs into RITA v5.1.2; scored all external connections for beacon regularity -- 85.239.53.219 flagged with rare_signature:SSLoad/1.1, beacon score 0.504, mean interval 477 seconds across 11 connections
-  - Built 3 Jupyter threat hunting notebooks: conn.log duration analysis, DNS query profiling, and beacon interval visualization confirming C2 sleep timer pattern
-  - Mapped findings to 6 MITRE ATT&CK techniques (T1071, T1071.004, T1008, T1095, T1557, T1018); produced IOC table and 2 Sigma detection rules in a full investigation report PDF
+  - Ran Zeek 8.2.1 against a real SSLoad and Cobalt Strike PCAP, generating 17 structured logs
+  - RITA flagged 85.239.53.219 as a beacon (score 0.504, 477 second mean interval)
+  - Built 3 Jupyter threat hunting notebooks and 2 Sigma rules, mapped to 6 MITRE ATT&CK techniques
   - [GitHub Repo](https://github.com/ronankongala/zeek-network-forensics-lab)
 
 - <b>Malware Analysis Lab: AgentTesla Static, Dynamic + Memory Forensics</b>
-  - Reverse engineered a real AgentTesla credential stealer using PEStudio, CAPA, and Ghidra 12.1.2; identified MurmurHash API hashing at FUN_1400015a0, XOR-encrypted strings (x16), and a fraudulent DigiCert certificate chain
-  - Wrote 3 custom YARA rules from extracted indicators (imphash, MurmurHash seed bytes, structural heuristics) validated with YARA 4.5.5; zero false positives across System32
-  - Detonated the sample in Any.run sandbox; confirmed Stealc/Vidar stealer behavior, 32 dropped files targeting Chrome/Edge credential stores, 87 IOCs, 11 MITRE ATT&CK techniques mapped
-  - Acquired live memory from FlareVM with winpmem v4.0-rc1 (7GB dump), analyzed with Volatility 3; detected PAGE_EXECUTE_READWRITE code injection in SearchApp.exe and powershell.exe
+  - Reverse engineered a real AgentTesla stealer with PEStudio, CAPA, and Ghidra, finding MurmurHash API hashing
+  - Wrote 3 YARA rules with zero false positives and confirmed 87 IOCs in the Any.run sandbox
+  - Detected code injection in SearchApp.exe and powershell.exe with Volatility 3 on a 7GB memory dump
   - [GitHub Repo](https://github.com/ronankongala/malware-analysis-lab)
 
 - <b>AppSec Pipeline + Secrets Management Lab</b>
