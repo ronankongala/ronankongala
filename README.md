@@ -2,7 +2,7 @@
 
 **AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
-### [ronankongala.github.io](https://ronankongala.github.io) &middot; 25 case studies with write-ups
+### [ronankongala.github.io](https://ronankongala.github.io) &middot; 24 case studies with write-ups
 
 <a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
 <a href="mailto:kongalaronan@gmail.com">kongalaronan@gmail.com</a> &middot;
@@ -10,15 +10,15 @@ Boston, MA
 
 <h2>Featured Projects</h2>
 
-_Selected work below. The complete log of 25 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+_Selected work below. The complete log of 24 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
 
-- <b>Red Team C2 Lab: Sliver C2 Adversary Emulation (CASE-26)</b>
+- <b>Red Team C2 Lab: Sliver C2 Adversary Emulation (CASE-24)</b>
   - Ran Sliver C2 v1.7.7 against a Windows 11 Enterprise victim on an isolated VMware NAT network, executing 7 MITRE ATT&CK techniques from HTTPS beacon delivery to exfiltration over the C2 channel
   - Dumped the SAM and SYSTEM hives, parsed 5 accounts with pypykatz, and authenticated over SMB with pass-the-hash through impacket
   - Ships with 3 Sigma detection rules, an ATT&CK Navigator layer, and a red team report
   - [GitHub Repo](https://github.com/ronankongala/red-team-c2-lab)
 
-- <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-25)</b>
+- <b>FraudSentry: Fraud Detection, SHAP Explainability + Fairness Audit (CASE-10)</b>
   - Compared 4 models on the IEEE-CIS dataset with a time-based split; RandomForest led at 0.748 ROC-AUC, catching 649 of 4,064 held-out fraud cases at a 3% false-positive budget
   - A fairness audit found a 23.7-point false-positive-rate spread across merchant categories, documented next to SHAP explanations and a GDPR DPIA
   - [GitHub Repo](https://github.com/ronankongala/fraudsentry)
