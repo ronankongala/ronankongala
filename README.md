@@ -2,7 +2,7 @@
 
 **AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
-### [ronankongala.github.io](https://ronankongala.github.io) &middot; 24 case studies with write-ups
+### [ronankongala.github.io](https://ronankongala.github.io) &middot; 25 case studies with write-ups
 
 <a href="https://www.linkedin.com/in/ronan-kongala">LinkedIn</a> &middot;
 <a href="mailto:kongalaronan@gmail.com">kongalaronan@gmail.com</a> &middot;
@@ -10,7 +10,13 @@ Boston, MA
 
 <h2>Featured Projects</h2>
 
-_Selected work below. The complete log of 24 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+_Selected work below. The complete log of 25 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+
+- <b>EC2 Vulnerability Lab (CASE-25)</b>
+  - Built an intentionally vulnerable AWS EC2 target with Terraform on Amazon Linux 2023, and a read-only boto3 scanner found 9 cloud misconfigurations
+  - Approval-gated fix rules with dry-run preview, rollback and post-fix verification closed 6 of 9; the other 3 need a rebuild or design change and stay open by design
+  - Compliance rose from 0% at baseline to 66.7% after remediation with 0 errors, tracked in a local FastAPI dashboard and an audit log
+  - [GitHub Repo](https://github.com/ronankongala/ec2-vuln-lab)
 
 - <b>Red Team C2 Lab: Sliver C2 Adversary Emulation (CASE-24)</b>
   - Ran Sliver C2 v1.7.7 against a Windows 11 Enterprise victim on an isolated VMware NAT network, executing 7 MITRE ATT&CK techniques from HTTPS beacon delivery to exfiltration over the C2 channel
