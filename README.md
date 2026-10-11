@@ -1,6 +1,6 @@
 <h1>Hi, I'm Ronan!</h1>
 
-**AI Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
+**Cybersecurity Intern @ Abbott** &middot; MS Cybersecurity @ Northeastern, Khoury College
 
 ### [ronankongala.github.io](https://ronankongala.github.io) &middot; 25 case studies with write-ups
 
