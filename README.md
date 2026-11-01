@@ -10,7 +10,13 @@ Boston, MA
 
 <h2>Featured Projects</h2>
 
-_Selected work below. The complete log of 25 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+_Selected work below. The complete log of 26 cases, filterable by tag, lives at [ronankongala.github.io](https://ronankongala.github.io)._
+
+- <b>Android Threat Engine: Ghera Benchmark Threat Models + APK Attack Surface Tool (CASE-26)</b>
+  - Built on the Ghera benchmark repository (tag Jan2019, 57 benchmarks) with 24 code-referenced threat models for the ICC and Web benchmarks using STRIDE, LINDDUN, attack trees and Mermaid, plus standards mappings for the other 31 benchmarks against CWE, OWASP MASVS v2, MASWE and MASTG
+  - A command line tool decodes an APK with apktool and writes manifest attack-surface findings with CWE IDs scored against a ground truth of 1 row per benchmark, with a drift matrix tracking API levels 22 to 34 and a log of 234 benchmark differences
+  - A Step 1 emulator smoke test confirmed a broadcast receiver exploit fires against the Benign app and is blocked by the Secure app, with the Permission Denial captured in adb logcat
+  - [GitHub Repo](https://github.com/ronankongala/android-threat-model)
 
 - <b>EC2 Vulnerability Lab (CASE-25)</b>
   - Built an intentionally vulnerable AWS EC2 target with Terraform on Amazon Linux 2023, and a read-only boto3 scanner found 9 cloud misconfigurations
