@@ -15,7 +15,7 @@ _Selected work below. The complete log of 26 cases, filterable by tag, lives at 
 - <b>Android Threat Engine: Ghera Benchmark Threat Models + APK Attack Surface Tool (CASE-26)</b>
   - Built on the Ghera benchmark repository (tag Jan2019, 57 benchmarks) with 24 code-referenced threat models for the ICC and Web benchmarks using STRIDE, LINDDUN, attack trees and Mermaid, plus standards mappings for the other 31 benchmarks against CWE, OWASP MASVS v2, MASWE and MASTG
   - Complete command line tool that decodes an APK with apktool and runs a 4-layer analysis (manifest attack surface, smali code patterns, interprocedural taint tracking and dynamic testing on an emulator over adb), writing findings with CWE IDs and evidence
-  - Scored against a ground truth of 1 row per benchmark at 0.68 recall and 0.51 precision, with a drift matrix tracking API levels 22 to 34 and a log of 234 benchmark differences
+  - Scored against a ground truth of 1 row per benchmark at 0.77 recall and 0.53 precision, with a drift matrix tracking API levels 22 to 34 and a log of 234 benchmark differences
   - [GitHub Repo](https://github.com/ronankongala/android-threat-model)
 
 - <b>EC2 Vulnerability Lab (CASE-25)</b>
